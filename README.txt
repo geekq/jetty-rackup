@@ -18,9 +18,20 @@ So here is the solution:
 
 * write your Rack based application as usual
 * create a rackup script `config.ru` as usual
-* install jetty-rackup (this project)
+* install jetty-rackup (this project), e.g. 
+  `git clone git://github.com/geekq/jetty-rackup.git`
 * run your application from the command line inside jetty servlet container
   from your application folder with `jetty-rackup`
+
+
+Binaries
+--------
+The jetty and jruby-rack binaries are now provided for your convinience.
+But you can also download a different version of them if you wish from
+the official web sites of the respective projects:
+
+* http://jetty.mortbay.com/
+* http://kenai.com/projects/jruby-rack/pages/Home
 
 
 TODO

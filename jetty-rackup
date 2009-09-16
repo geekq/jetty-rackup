@@ -3,17 +3,9 @@
 
 require 'java'
 require 'rubygems'
-require 'warbler' # jruby-rack-0.9.5.jar
-
-rb_root = File.dirname(__FILE__)
-app_root = File.dirname(__FILE__)+'/../'
-
-Dir[app_root+"./*.jar"].each { |jar| require jar }
 require 'rack'
 
-Dir["/D/vd-home/opt/jruby-1.3.0/lib/ruby/gems/1.8/gems/jetty-rails-0.8.1/jetty-libs/*.jar"].each { |jar| require jar }
-require '/D/vd-home/opt/jruby-1.3.0/lib/ruby/gems/1.8/gems/warbler-0.9.14/lib/jruby-rack-0.9.5.jar'
-Dir[app_root+"./Java/jsdk/*.jar"].each { |jar| require jar }
+Dir[File.join(File.dirname(__FILE__), 'jars', '*.jar')].each { |jar| require jar }
 
 include_class 'javax.servlet.http.HttpServlet'
 include_class 'org.mortbay.jetty.Server'
