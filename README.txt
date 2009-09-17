@@ -20,8 +20,11 @@ So here is the solution:
 * create a rackup script `config.ru` as usual
 * install jetty-rackup (this project), e.g. 
   `git clone git://github.com/geekq/jetty-rackup.git`
-* run your application from the command line inside jetty servlet container
-  from your application folder with `jetty-rackup`
+* from your application folder run `jetty-rackup`. You can also provide
+  a path to non-standard rackup-script and (soon) the desired port
+  number for the server to run.
+
+Now your application runs inside jetty servlet container. Enjoy!
 
 
 Binaries
@@ -54,6 +57,7 @@ Copyright
 
 
 Author
------
-Vladimir Dobriakov http://blog.geekq.net, http://www.innoq.com/blog/vd
+------
+Vladimir Dobriakov, innoQ Deutschland GmbH 
+http://blog.geekq.net, http://www.innoq.com/blog/vd
 

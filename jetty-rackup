@@ -32,20 +32,14 @@ context.set_resource_base(File.dirname(__FILE__))
 context.add_event_listener(org.jruby.rack.RackServletContextListener.new)
 
 rackup = File.read(config)
-  "
-      run lambda { |env| [200, {}, '<h1>Hello From JRuby
-Rack!</h1>'+Time.now.to_s+'<br> env:'+env.inspect]  }
-    "
-
 
 context.set_init_params(java.util.HashMap.new(
-    #'rails.root'=> '.', 'public.root' => 'public',
-    'org.mortbay.jetty.servlet.Default.relativeResourceBase' => '/public',
-    'rackup' => rackup,
-    'jruby.max.runtimes' => '1'))
- context.add_servlet(org.mortbay.jetty.servlet.ServletHolder.new(
-     org.mortbay.jetty.servlet.DefaultServlet.new), "/")
+  'org.mortbay.jetty.servlet.Default.relativeResourceBase' => '/public',
+  'rackup' => rackup,
+  'jruby.max.runtimes' => '1'))
+context.add_servlet(org.mortbay.jetty.servlet.ServletHolder.new(
+  org.mortbay.jetty.servlet.DefaultServlet.new), "/")
 
- server.set_handler(context)
- server.start
+server.set_handler(context)
+server.start
 
