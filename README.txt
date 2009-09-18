@@ -74,7 +74,7 @@ http://jetty-rails.rubyforge.org/
 
 Copyright
 ---------
-(c) 2009 Vodafone
+(c) 2009 Vodafone Group Services GmbH
 
 
 Author
