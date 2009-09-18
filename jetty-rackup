@@ -82,7 +82,7 @@ opts = OptionParser.new("", 24, '  ') { |opts|
 
   opts.separator ""
   opts.separator "Rack options:"
-  opts.on("-s", "--server SERVER", "serve using SERVER (webrick/mongrel)") { |s|
+  opts.on("-s", "--server SERVER", "serve using SERVER (only jetty is supported)") { |s|
     server_type = s
   }
 
@@ -91,14 +91,14 @@ opts = OptionParser.new("", 24, '  ') { |opts|
   }
 
   opts.on("-p", "--port PORT", "use PORT (default: 9292)") { |port|
-    options[:Port] = port
+    options[:Port] = port.to_i
   }
 
   opts.on("-E", "--env ENVIRONMENT", "use ENVIRONMENT for defaults (default: development)") { |e|
     env = e
   }
 
-  opts.on("-D", "--daemonize", "run daemonized in the background") { |d|
+  opts.on("-D", "--daemonize", "run daemonized in the background - does not work with JRuby - please use a wrapper shell script") { |d|
     daemonize = d ? true : false
   }
 

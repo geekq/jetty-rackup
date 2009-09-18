@@ -17,7 +17,8 @@ centric application architecture."
 So here is the solution:
 
 * write your Rack based application as usual
-* create a rackup script `config.ru` as usual
+* create a rackup script `config.ru` as usual, please read the
+  official tutorial http://wiki.github.com/rack/rack/tutorial-rackup-howto
 * install jetty-rackup (this project), e.g. 
   `git clone git://github.com/geekq/jetty-rackup.git`
 * from your application folder run `jetty-rackup`. You can also provide
@@ -40,8 +41,7 @@ the official web sites of the respective projects:
 TODO
 ----
 * package as gem
-* support all the Rack settings like custom port number etc.
-
+* demonization facility
 
 Credits
 -------
@@ -60,4 +60,13 @@ Author
 ------
 Vladimir Dobriakov, innoQ Deutschland GmbH 
 http://blog.geekq.net, http://www.innoq.com/blog/vd
+
+
+Feedback 
+-------- 
+
+jetty_rackup is very new.  Please let me know, it something, especially
+advandced rack configuration does not work. Please also let me know, if
+your were able to successfully run a web server using jetty_rackup. You
+can use github messaging.
 
