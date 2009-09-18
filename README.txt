@@ -28,6 +28,20 @@ So here is the solution:
 Now your application runs inside jetty servlet container. Enjoy!
 
 
+Example
+-------
+    $cat config.ru
+
+    #\ -p 8765
+    require 'rubygems'
+    gem 'sinatra', '~> 0.9.4'
+    require './my_app.rb'
+    set :run, false # disable built-in sinatra web server
+    set :environment, :development
+    set :base_url, 'http://xxtrial' # custom application option
+    run Sinatra::Application
+
+
 Binaries
 --------
 The jetty and jruby-rack binaries are now provided for your convinience.
