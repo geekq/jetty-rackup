@@ -42,8 +42,7 @@ class Rack::Handler::Jetty
 end
 
 
-# Following is based on the original rackup script.
-# Unfortunately had to copy, paste and adjust.
+# Option parsing is based on the original rackup script.
 
 automatic = false
 server_type = nil
@@ -134,6 +133,8 @@ if config =~ /\.ru$/
   if rackup[/^#\\(.*)/]
     opts.parse! $1.split(/\s+/)
   end
+else
+  abort "configuration file with .ru extention expected, was '#{config}'"
 end
 
 unless server = Rack::Handler.get(server_type)

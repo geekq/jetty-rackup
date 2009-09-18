@@ -47,8 +47,8 @@ Credits
 -------
 * Michal Hantl for the first working jetty based 'Hello world'
   application. http://michal.hantl.cz/
-* Nick Sieger for jruby-rack and the explanation of servlet context init
-  params. http://blog.nicksieger.com/
+* Nick Sieger the explanation of servlet context init params and of course 
+  jruby-rack itself. http://blog.nicksieger.com/
 
 
 Copyright
@@ -64,9 +64,8 @@ http://blog.geekq.net, http://www.innoq.com/blog/vd
 
 Feedback 
 -------- 
-
 jetty_rackup is very new.  Please let me know, it something, especially
-advandced rack configuration does not work. Please also let me know, if
+advandced rack configuration, does not work. Please also let me know if
 your were able to successfully run a web server using jetty_rackup. You
 can use github messaging.
 
