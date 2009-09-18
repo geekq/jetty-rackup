@@ -17,12 +17,12 @@ centric application architecture."
 So here is the solution:
 
 * write your Rack based application as usual
-* create a rackup script `config.ru` as usual, please read the
-  official tutorial http://wiki.github.com/rack/rack/tutorial-rackup-howto
+* create a rackup script `config.ru` as usual; there is more information in
+  the official tutorial http://wiki.github.com/rack/rack/tutorial-rackup-howto
 * install jetty-rackup (this project), e.g. 
   `git clone git://github.com/geekq/jetty-rackup.git`
 * from your application folder run `jetty-rackup`. You can also provide
-  a path to non-standard rackup-script and (soon) the desired port
+  a path to non-standard rackup-script and the desired port
   number for the server to run.
 
 Now your application runs inside jetty servlet container. Enjoy!
@@ -31,7 +31,7 @@ Now your application runs inside jetty servlet container. Enjoy!
 Binaries
 --------
 The jetty and jruby-rack binaries are now provided for your convinience.
-But you can also download a different version of them if you wish from
+But you can also download a different version of them, if you wish, from
 the official web sites of the respective projects:
 
 * http://jetty.mortbay.com/
@@ -43,12 +43,19 @@ TODO
 * package as gem
 * demonization facility
 
+
 Credits
 -------
 * Michal Hantl for the first working jetty based 'Hello world'
   application. http://michal.hantl.cz/
-* Nick Sieger the explanation of servlet context init params and of course 
-  jruby-rack itself. http://blog.nicksieger.com/
+* Nick Sieger for the explanation of servlet context init params and of 
+  course jruby-rack itself. http://blog.nicksieger.com/
+
+
+See also
+--------
+For Rails deployment you may prefer jetty-rails 
+http://jetty-rails.rubyforge.org/
 
 
 Copyright
