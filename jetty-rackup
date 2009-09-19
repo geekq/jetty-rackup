@@ -133,6 +133,7 @@ if config =~ /\.ru$/
   if rackup[/^#\\(.*)/]
     opts.parse! $1.split(/\s+/)
   end
+  #rackup << "\n  set :environment, :#{env}" if env
 else
   abort "configuration file with .ru extention expected, was '#{config}'"
 end
@@ -145,8 +146,12 @@ p server  if $DEBUG
 
 if $DEBUG
   pp app
-  pp inner_app
+  pp rackup
 end
+
+puts "---- rackup"
+puts rackup
+puts "---- "
 
 server.run rackup, options
 
