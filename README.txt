@@ -48,7 +48,7 @@ The jetty and jruby-rack binaries are now provided for your convinience.
 But you can also download a different version of them, if you wish, from
 the official web sites of the respective projects:
 
-* http://jetty.mortbay.com/
+* http://jetty.codehaus.org/jetty/
 * http://kenai.com/projects/jruby-rack/pages/Home
 
 
