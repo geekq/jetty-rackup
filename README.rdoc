@@ -1,5 +1,4 @@
-jetty-rackup
-============
+== jetty-rackup
 
 For the newer projects we decided to switch from MRI to JRuby.  One of
 the bigger questions is certainly the deployment.
