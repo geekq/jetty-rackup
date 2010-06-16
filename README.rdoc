@@ -72,22 +72,16 @@ See also
 For Rails deployment you may prefer jetty-rails 
 http://jetty-rails.rubyforge.org/
 
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
 
-Copyright
----------
-(c) 2009 Vodafone Group Services GmbH
+== Copyright
 
-
-Author
-------
-Vladimir Dobriakov, innoQ Deutschland GmbH 
-http://blog.geekq.net, http://www.innoq.com/blog/vd
-
-
-Feedback 
--------- 
-jetty_rackup is very new.  Please let me know, if something, especially
-advandced rack configuration, does not work. Please also let me know if
-your were able to successfully run a web server using jetty_rackup. You
-can use github messaging.
-
+Copyright (c) 2010 Jason Rogers. See LICENSE for details.

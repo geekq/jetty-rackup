@@ -8,7 +8,7 @@ require 'optparse'
 
 class Rack::Handler::Jetty
   def self.run(rackup_content, options={})
-    Dir[File.join(File.dirname(__FILE__), 'jars', '*.jar')].each { |jar| require jar }
+    Dir[File.join(File.dirname(__FILE__), '..', 'jars', '*.jar')].each { |jar| require jar }
 
     include_class 'javax.servlet.http.HttpServlet'
     include_class 'org.mortbay.jetty.Server'
