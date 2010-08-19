@@ -59,6 +59,13 @@ TODO
 * respect the --env command line parameter
 
 
+FAQ
+---
+
+> What's the best way to set max memory?
+
+    jruby -J-Xmx2048m  /usr/local/lib/jetty-rackup/jetty-rackup config.ru
+
 Credits
 -------
 * Michal Hantl for the first working jetty based 'Hello world'
@@ -82,12 +89,4 @@ Author
 ------
 Vladimir Dobriakov, innoQ Deutschland GmbH 
 http://blog.geekq.net, http://www.innoq.com/blog/vd
-
-
-Feedback 
--------- 
-jetty_rackup is very new.  Please let me know, if something, especially
-advandced rack configuration, does not work. Please also let me know if
-your were able to successfully run a web server using jetty_rackup. You
-can use github messaging.
 
