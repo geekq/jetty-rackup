@@ -1,3 +1,5 @@
 #!/usr/bin/env jruby
 
-require File.join(File.dirname(__FILE__), '..', 'lib', 'jetty-rackup')
+$:.unshift "#{File.dirname(__FILE__)}/../lib"
+
+require 'jetty-rackup'
