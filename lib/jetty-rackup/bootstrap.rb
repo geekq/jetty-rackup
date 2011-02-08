@@ -92,6 +92,7 @@ if config =~ /\.ru$/
     opts.parse! $1.split(/\s+/)
   end
   #rackup << "\n  set :environment, :#{env}" if env
+  rackup.gsub! /set :environment, .*?$/, "set :environment, :#{env}" if env
 else
   abort "configuration file with .ru extention expected, was '#{config}'"
 end
