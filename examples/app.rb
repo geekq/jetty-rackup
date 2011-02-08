@@ -2,6 +2,6 @@ get '/?' do
   'hello'
 end
 
-get '/:message/?' do
+get '/:message/?' do |message|
   "hello #{message}"
 end
