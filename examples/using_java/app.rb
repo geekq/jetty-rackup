@@ -8,10 +8,14 @@ require 'sinatra'
 #   use Rack::Reloader           # to reload required every files
 # end
 
-get '/?' do
-  "hello"
+get '/some' do
+  import 'Some'  # using import
+  
+  some = Some.new
+  "From WEB-INF/classes: #{some.say}"
 end
 
-get '/:message/?' do |message|
-  "hello #{message}"
+get '/other' do
+  other = Java::Other.new  # or directly by the Java "namespace"
+  "From WEB-INF/lib: #{other.say}"
 end

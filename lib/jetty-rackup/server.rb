@@ -27,7 +27,13 @@ class Rack::Handler::Jetty
       
     context.add_servlet(org.mortbay.jetty.servlet.ServletHolder.new(
       org.mortbay.jetty.servlet.DefaultServlet.new), "/")
+    
+    JRuby.runtime.jruby_class_loader.add_url(java.io.File.new("WEB-INF/classes").to_url)
 
+    Dir["WEB-INF/lib/**/*.jar"].each do |jar|
+      JRuby.runtime.jruby_class_loader.add_url(java.io.File.new(jar).to_url)
+    end
+    
     jetty.set_handler(context)
     jetty.start
   end
