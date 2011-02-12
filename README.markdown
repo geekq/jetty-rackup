@@ -60,6 +60,11 @@ FAQ
 
     jruby -J-Xmx2048m  /usr/local/lib/jetty-rackup/jetty-rackup config.ru
 
+TODO
+----
+
+Tests ;-)
+
 See also
 --------
 For Rails deployment you may prefer jetty-rails 
@@ -77,7 +82,7 @@ Vladimir Dobriakov, innoQ Deutschland GmbH
 <http://blog.geekq.net>, <http://www.innoq.com/blog/vd>
 
 With contributions by [Leandro Silva](http://leandrosilva.com.br/) and
-[Jason Rogers](http://wordsanddeeds.org/)
+Jason Rogers.
 
 Further Credits
 ---------------
