@@ -1,1 +1,3 @@
 .DS_Store
+jetty-rackup.gemspec
+pkg/

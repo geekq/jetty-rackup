@@ -7,9 +7,9 @@ begin
     gem.name = "jetty-rackup"
     gem.summary = %Q{Rack + Jetty = Retty}
     gem.description = %Q{Runs a rack conform application inside jetty web server}
-    gem.email = "jacaetevha@gmail.com"
-    gem.homepage = "http://github.com/jacaetevha/jetty-rackup"
-    gem.authors = ["Jason Rogers"]
+    gem.email = "vladimir@geekq.net"
+    gem.homepage = "http://github.com/geekq/jetty-rackup"
+    gem.authors = ["Vladimir Dobriakov", "Leandro Silva", "Jason Rogers"]
     # gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
