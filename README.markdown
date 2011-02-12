@@ -6,7 +6,7 @@ the bigger questions is certainly the deployment.
 
 Reading and trying all the warbler stuff, we had enough of packaging and
 wanted to do it the Ruby/Sinatra way (with a standalone script, where
-one can conciously start things like `run Sinatra::Application` from a
+one can consciously start things like `run Sinatra::Application` from a
 rackup script).
 
 Embedding jetty is also mentioned in the jetty documentation "For many
@@ -53,27 +53,12 @@ the official web sites of the respective projects:
 * <http://kenai.com/projects/jruby-rack/pages/Home>
 
 
-TODO
-----
-* package as gem
-* demonization facility
-* respect the --env command line parameter
-
-
 FAQ
 ---
 
 > What's the best way to set max memory?
 
     jruby -J-Xmx2048m  /usr/local/lib/jetty-rackup/jetty-rackup config.ru
-
-Credits
--------
-* Michal Hantl for the first working jetty based 'Hello world'
-  application. <http://michal.hantl.cz/>
-* Nick Sieger for the explanation of servlet context init params and of 
-  course jruby-rack itself. <http://blog.nicksieger.com/>
-
 
 See also
 --------
@@ -90,4 +75,15 @@ Author
 ------
 Vladimir Dobriakov, innoQ Deutschland GmbH 
 <http://blog.geekq.net>, <http://www.innoq.com/blog/vd>
+
+With contributions by [Leandro Silva](http://leandrosilva.com.br/) and
+[Jason Rogers](http://wordsanddeeds.org/)
+
+Further Credits
+---------------
+* Michal Hantl for the first working jetty based 'Hello world'
+  application. <http://michal.hantl.cz/>
+* Nick Sieger for the explanation of servlet context init params and of 
+  course jruby-rack itself. <http://blog.nicksieger.com/>
+
 
