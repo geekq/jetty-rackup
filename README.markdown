@@ -75,6 +75,7 @@ For Rails deployment you may prefer jetty-rails
 Copyright
 ---------
 (c) 2009 Vodafone Group Services GmbH
+(c) 2012 Vladimir Dobriakov
 
 
 Author
