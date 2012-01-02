@@ -52,6 +52,7 @@ the official web sites of the respective projects:
 * <http://jetty.codehaus.org/jetty/>
 * <http://kenai.com/projects/jruby-rack/pages/Home>
 
+The major gem version (7) now matches the used jetty version.
 
 FAQ
 ---
@@ -78,8 +79,8 @@ Copyright
 
 Author
 ------
-Vladimir Dobriakov, innoQ Deutschland GmbH 
-<http://blog.geekq.net>, <http://www.innoq.com/blog/vd>
+Vladimir Dobriakov
+<http://blog.geekq.net>, <http://www.mobile-web-consulting.de>
 
 With contributions by [Leandro Silva](http://leandrosilva.com.br/) and
 Jason Rogers.
@@ -90,5 +91,6 @@ Further Credits
   application. <http://michal.hantl.cz/>
 * Nick Sieger for the explanation of servlet context init params and of 
   course jruby-rack itself. <http://blog.nicksieger.com/>
+* Thanks to [Nik](https://github.com/11xor6) for the Jetty 7.0 port.
 
 
