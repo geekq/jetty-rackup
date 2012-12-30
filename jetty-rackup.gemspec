@@ -12,15 +12,19 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Rack + Jetty = Retty}
   gem.homepage      = %q{http://github.com/geekq/jetty-rackup}
 
+  # Order is important - put this line before all other file related directives
+  gem.files         = `git ls-files`.split($/)
+
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  gem.default_executable = %q{jetty-rackup}
+
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+
   gem.require_paths = ["lib"]
 
   gem.rubygems_version = %q{1.3.6}
 
   gem.extra_rdoc_files = [
-    "LICENSE",
+    "LICENSE.txt",
     "README.markdown"
   ]
 
@@ -32,6 +36,5 @@ Gem::Specification.new do |gem|
   # gem 'sinatra', :group => :development
   gem.add_development_dependency 'sinatra'
 
-  gem.files         = `git ls-files`.split($/)
 end
 

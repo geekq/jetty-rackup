@@ -70,8 +70,11 @@ example applications with rackup configuration. Just cd to the
 particular example directory and run. E.g.
 
     cd examples/just_ruby/
-    jruby ../../bin/jetty-rackup config.ru
+    jetty-rackup
     firefox http://localhost:9292/stranger
+
+jetty-rackup uses `config.ru` file from the current directory by
+default.
 
 See also
 --------
