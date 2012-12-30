@@ -19,7 +19,7 @@ So here is the solution:
 * write your Rack based application as usual
 * create a rackup script `config.ru` as usual; there is more information in
   the official tutorial
-  <http://wiki.github.com/rack/rack/tutorial-rackup-howto>
+  <https://github.com/rack/rack/wiki/(tutorial)-rackup-howto>
 * install jetty-rackup (this project), e.g.
   `gem install jetty-rackup` or
   `git clone git://github.com/geekq/jetty-rackup.git`
@@ -36,7 +36,7 @@ Example
 
     #\ -p 8765
     require 'rubygems'
-    gem 'sinatra', '~> 0.9.4'
+    gem 'sinatra', '>= 1.0.0'
     require './my_app.rb'
     set :run, false # disable built-in sinatra web server
     set :environment, :development
@@ -82,6 +82,7 @@ For Rails deployment you may prefer jetty-rails
 Copyright
 ---------
 (c) 2009 Vodafone Group Services GmbH
+
 (c) 2013 Vladimir Dobriakov
 
 
