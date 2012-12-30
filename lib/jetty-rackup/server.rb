@@ -2,16 +2,16 @@ class Rack::Handler::Jetty
   def self.run(rackup_content, options={})
     Dir["#{File.dirname(__FILE__)}/../../jars/*.jar"].each { |jar| require jar }
 
-    include_class 'javax.servlet.http.HttpServlet'
-    include_class 'org.eclipse.jetty.server.Server'
-    include_class 'org.eclipse.jetty.servlet.ServletContextHandler'
-    include_class 'org.eclipse.jetty.servlet.ServletHolder'
-    include_class 'org.jruby.rack.servlet.ServletRackContext'
-    include_class 'org.eclipse.jetty.server.handler.ResourceHandler'
-    include_class 'org.eclipse.jetty.server.handler.DefaultHandler'
-    include_class 'org.eclipse.jetty.server.handler.HandlerList'
-    include_class 'org.eclipse.jetty.server.handler.ContextHandlerCollection'
-    include_class 'org.eclipse.jetty.servlet.DefaultServlet'
+    java_import 'javax.servlet.http.HttpServlet'
+    java_import 'org.eclipse.jetty.server.Server'
+    java_import 'org.eclipse.jetty.servlet.ServletContextHandler'
+    java_import 'org.eclipse.jetty.servlet.ServletHolder'
+    java_import 'org.jruby.rack.servlet.ServletRackContext'
+    java_import 'org.eclipse.jetty.server.handler.ResourceHandler'
+    java_import 'org.eclipse.jetty.server.handler.DefaultHandler'
+    java_import 'org.eclipse.jetty.server.handler.HandlerList'
+    java_import 'org.eclipse.jetty.server.handler.ContextHandlerCollection'
+    java_import 'org.eclipse.jetty.servlet.DefaultServlet'
 
     jetty = org.eclipse.jetty.server.Server.new options[:Port]
 
