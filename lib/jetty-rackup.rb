@@ -1,5 +1,5 @@
 #!/usr/bin/env jruby
-# -*- ruby -*-
+require "jetty-rackup/version"
 
 require 'rubygems'
 require 'rack'

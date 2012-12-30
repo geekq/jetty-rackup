@@ -20,7 +20,8 @@ So here is the solution:
 * create a rackup script `config.ru` as usual; there is more information in
   the official tutorial
   <http://wiki.github.com/rack/rack/tutorial-rackup-howto>
-* install jetty-rackup (this project), e.g. 
+* install jetty-rackup (this project), e.g.
+  `gem install jetty-rackup` or
   `git clone git://github.com/geekq/jetty-rackup.git`
 * from your application folder run `jetty-rackup`. You can also provide
   a path to non-standard rackup-script and the desired port
@@ -61,21 +62,27 @@ FAQ
 
     jruby -J-Xmx2048m  /usr/local/lib/jetty-rackup/jetty-rackup config.ru
 
-TODO
+Tests
 ----
 
-Tests ;-)
+There are no automated tests for jetty-rackup. But there are some
+example applications with rackup configuration. Just cd to the
+particular example directory and run. E.g.
+
+    cd examples/just_ruby/
+    jruby ../../bin/jetty-rackup config.ru
+    firefox http://localhost:9292/stranger
 
 See also
 --------
-For Rails deployment you may prefer jetty-rails 
+For Rails deployment you may prefer jetty-rails
 <http://jetty-rails.rubyforge.org/>
 
 
 Copyright
 ---------
 (c) 2009 Vodafone Group Services GmbH
-(c) 2012 Vladimir Dobriakov
+(c) 2013 Vladimir Dobriakov
 
 
 Author
@@ -83,8 +90,8 @@ Author
 Vladimir Dobriakov
 <http://blog.geekq.net>, <http://www.mobile-web-consulting.de>
 
-With contributions by [Leandro Silva](http://leandrosilva.com.br/) and
-Jason Rogers.
+With contributions by [Leandro Silva](http://leandrosilva.com.br/),
+Jason Rogers and erdeszt.
 
 Further Credits
 ---------------
