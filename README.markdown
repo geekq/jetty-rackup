@@ -76,6 +76,12 @@ particular example directory and run. E.g.
 jetty-rackup uses `config.ru` file from the current directory by
 default.
 
+What's new
+----------
+* 7.2.0 Add support for `Host` option. In addition to specifying port
+  now a host ip can also be specified if e.g. you only wish to bind the
+  server only to the loopback interface 127.0.0.1 and not to all IPs.
+
 See also
 --------
 For Rails deployment you may prefer jetty-rails

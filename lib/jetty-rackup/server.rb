@@ -2,6 +2,8 @@ class Rack::Handler::Jetty
   def self.run(rackup_content, options={})
     Dir["#{File.dirname(__FILE__)}/../../jars/*.jar"].each { |jar| require jar }
 
+    include_class 'java.net.InetAddress'
+    include_class 'java.net.InetSocketAddress'
     java_import 'javax.servlet.http.HttpServlet'
     java_import 'org.eclipse.jetty.server.Server'
     java_import 'org.eclipse.jetty.servlet.ServletContextHandler'
@@ -13,7 +15,9 @@ class Rack::Handler::Jetty
     java_import 'org.eclipse.jetty.server.handler.ContextHandlerCollection'
     java_import 'org.eclipse.jetty.servlet.DefaultServlet'
 
-    jetty = org.eclipse.jetty.server.Server.new options[:Port]
+    bind_to_address = java.net.InetAddress.getByName(options[:Host])
+    socket_address = java.net.InetSocketAddress.new(bind_to_address, options[:Port])
+    jetty = org.eclipse.jetty.server.Server.new(socket_address)
 
     context = org.eclipse.jetty.servlet.ServletContextHandler.new(nil, "/", org.eclipse.jetty.servlet.ServletContextHandler::NO_SESSIONS)
     context.add_filter("org.jruby.rack.RackFilter", "/*", 0)
