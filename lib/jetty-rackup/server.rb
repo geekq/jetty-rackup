@@ -2,8 +2,8 @@ class Rack::Handler::Jetty
   def self.run(rackup_content, options={})
     Dir["#{File.dirname(__FILE__)}/../../jars/*.jar"].each { |jar| require jar }
 
-    include_class 'java.net.InetAddress'
-    include_class 'java.net.InetSocketAddress'
+    java_import 'java.net.InetAddress'
+    java_import 'java.net.InetSocketAddress'
     java_import 'javax.servlet.http.HttpServlet'
     java_import 'org.eclipse.jetty.server.Server'
     java_import 'org.eclipse.jetty.servlet.ServletContextHandler'
