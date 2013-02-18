@@ -5,7 +5,6 @@
 automatic = false
 server_type = nil
 env = "development"
-pid = nil
 options = {:Port => 9292, :Host => "0.0.0.0", :AccessLog => []}
 
 opts = OptionParser.new("", 24, '  ') { |opts|
@@ -59,8 +58,15 @@ opts = OptionParser.new("", 24, '  ') { |opts|
     daemonize = d ? true : false
   }
 
-  opts.on("-P", "--pid FILE", "file to store PID (default: rack.pid)") { |f|
-    pid = File.expand_path(f)
+  opts.on("-P", "--pid FILE", "file to store PID") { |file|
+    file = File.expand_path(file)
+    
+    if !File.writable?(file)
+      puts "PID file doesn't writeable"
+      exit
+    end
+
+    File.write(file, java.io.File.new('/proc/self').canonical_file.name)
   }
 
   opts.separator ""
