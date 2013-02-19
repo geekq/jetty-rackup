@@ -78,9 +78,11 @@ default.
 
 What's new
 ----------
-* 7.2.0 Add support for `Host` option. In addition to specifying port
-  now a host ip can also be specified if e.g. you only wish to bind the
-  server only to the loopback interface 127.0.0.1 and not to all IPs.
+* 7.2.0
+  + Add support for `Host` option. In addition to specifying port
+    now a host ip can also be specified if e.g. you only wish to bind the
+    server only to the loopback interface 127.0.0.1 and not to all IPs.
+  + Add support for `pid` option - create pid file
 
 See also
 --------
