@@ -60,12 +60,7 @@ opts = OptionParser.new("", 24, '  ') { |opts|
 
   opts.on("-P", "--pid FILE", "file to store PID") { |file|
     file = File.expand_path(file)
-    
-    if !File.writable?(file)
-      puts "PID file doesn't writeable"
-      exit
-    end
-
+    puts "Creating PID file '#{file}'"
     File.write(file, java.io.File.new('/proc/self').canonical_file.name)
   }
 
