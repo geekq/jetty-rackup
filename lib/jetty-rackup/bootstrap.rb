@@ -80,8 +80,6 @@ opts = OptionParser.new("", 24, '  ') { |opts|
   opts.parse! ARGV
 }
 
-require 'pp'  if $DEBUG
-
 config = ARGV[0] || "config.ru"
 if !File.exist? config
   abort "configuration #{config} not found"
@@ -106,10 +104,10 @@ unless server = Rack::Handler.get(server_type)
   server = Rack::Handler::Jetty
 end
 
-p server  if $DEBUG
-
 if $DEBUG
-  pp app
+  require 'pp'
+
+  pp server
   pp rackup
 end
 
